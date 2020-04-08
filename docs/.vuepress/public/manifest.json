@@ -1,0 +1,24 @@
+{
+  "name": "LatteAndCat",
+  "short_name": "LAC",
+  "description": "安小狐的个人博客",
+  "icons": [
+    {
+      "src": "/icons/cat16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }, {
+      "src": "/icons/cat48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }, {
+      "src": "/icons/cat128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#FF66CC"
+}
