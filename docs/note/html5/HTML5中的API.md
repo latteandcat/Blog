@@ -178,7 +178,8 @@ reader.onload=function() {
   1. 首先设置draggable="true"使元素可拖动
   ```html
   <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
-    <img src="1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="100"></div>
+    <img src="1.png" draggable="true" ondragstart="drag(event)" id="drag1" width="100" height="100">
+  </div>
   <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
   ```
   2. 开始拖动时设置被拖数据的数据类型和值

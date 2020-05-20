@@ -106,11 +106,11 @@ categories:
 
 ```html
 //谷歌静态资源库
-<!--[if lte IE 9]>
+<!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 //百度静态资源库
-<!--[if lte IE 9]>
+<!--[if lt IE 9]>
   <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
 <![endif]-->
 ```

@@ -70,21 +70,19 @@ ctx.stroke();
 备注：addColorStop(offse,color)中渐变的开始位置和结束位置介于0-1之间，0代表开始，1代表结束。中间可以设置任何小数。
 
 ### 径向渐变
-```
+```js
+// (x0,y0)-->渐变的开始圆的 x,y 坐标
+// r0-->开始圆的半径
+// (x1,y1)-->渐变的结束圆的 x,y 坐标
+// r1-->结束圆的半径
+
 ctx.createradialGradient(x0,y0,r0,x1,y1,r1);
 
-(x0,y0)：渐变的开始圆的 x,y 坐标
-
-r0：开始圆的半径
-
-(x1,y1)：渐变的结束圆的 x,y 坐标
-
-r1：结束圆的半径
 ```
 
 ## 填充效果
 
-```
+```js
 ctx.fillstyle="值";    设置填充颜色
 ctx.fill();	          设置填充效果
 ```
@@ -130,9 +128,9 @@ setInterval(function(){
 	ctx.fillRect(x, 100, 100, 200);
 	//开始处理变量
 	x+=step*i;
-	if(x>canvas.width-100){
+	if ( x > canvas.width - 100) {
 		i=-1;
-	}else if(x<0){
+	} else if(x<0) {
 		i=1;
 	}
 },20);
@@ -180,7 +178,7 @@ setInterval(function(){
 
 ## 绘制圆弧
 
-- `content.arc(x,y,radius,startradian,endradian[,direct]);`
+- `content.arc(x,y,radius,startradian,endradian,direct);`
   - (x,y) 为圆心的坐标
   - radius 为半径
   - startradian 为开始弧度
