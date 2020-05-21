@@ -123,11 +123,45 @@ reader.onload=function() {
 
 - 获取当前地理位置  
   `window.navigator.geolocation.getCurrentPosition(success,error);`
-  - coords.latitude   维度
-  - coords.longitude   经度
-
-- 获取一次当前位置  
+  - 如果getCurrentPosition()运行成功，则向参数success中规定的函数返回一个coordinates对象
+    ```js
+    function success(position) {
+      // position.coords.latitude --> 十进制的纬度
+      // position.coords.longitude --> 十进制的经度
+      // position.coords.accuracy --> 位置精度
+      // position.coords.altitude --> 海拔，海平面以上以米计
+      // position.coords.altitudeAccuracy --> 位置的海拔精度
+      // position.coords.heading --> 方向，从正北开始以度计
+      // position.coords.speed --> 速度，以米/每秒计
+      // position.timestamp --> 响应的日期/时间
+    }
+    ```
+  - 如果getCurrentPosition()运行失败，则向参数error中规定的函数返回错误信息
+    ```js
+    function error(error) {
+      let msg = ''
+      switch (error.code) {
+        case error.PERMISSION_DENIED:
+          msg = "用户拒绝对获取地理位置的请求。"
+          break;
+        case error.POSITION_UNAVAILABLE:
+          msg = "位置信息是不可用的。"
+          break;
+        case error.TIMEOUT:
+          msg = "请求用户地理位置超时。"
+          break;
+        case error.UNKNOWN_ERROR:
+          msg = "未知错误。"
+          break;
+      }
+      alert(msg)
+    }
+    ```
+- 返回用户的当前位置，并继续返回用户移动时的更新位置  
   `window.navigator.geolocation.watchPosition(success,error);`
+
+- 使用 `clearWatch()` 可以停止 `watchPosition()` 方法
+
 
 ## 本地存储
 

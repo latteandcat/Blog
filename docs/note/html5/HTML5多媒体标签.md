@@ -18,7 +18,10 @@ categories:
 
 ### 兼容
 
-**source:** 指定多个音频,如果找到了当前浏览器支持的,那么会直接使用,如果所有的source标签格式都不支持,会显示最后的文本内容
+**source:** 指定多个音频,如果找到了当前浏览器支持的,那么会直接使用,如果所有的source标签格式都不支持,会显示最后的文本内容  
+
+`<audio>` 元素支持三种音频格式文件: MP3, Wav, 和 Ogg
+
 ```html
 <audio>
   <source src="trailer.mp3" type="audio/mpeg">
@@ -48,6 +51,9 @@ categories:
 ### 兼容
 
 **source:** 指定多个视频,如果找到了当前浏览器支持的,那么会直接使用,如果所有的source标签格式都不支持,会显示最后的文本内容
+
+`<video>` 元素支持三种视频格式文件: MP4, WebM, 和 Ogg
+
 ```html
 <video>
   <source src="trailer.mp4" type="video/mp4">

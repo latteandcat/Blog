@@ -125,9 +125,13 @@ input 元素使用 datalist 预定义值
  
 ### input
 - autofocus : 自动获取焦点
-- multiple : 实现多选效果
-- placeholder : 占位符
-- required : 必填项
+- required : 规定必须在提交之前填写输入域（不能为空）
+- placeholder
+  - 占位符
+  - 适用于以下类型的input标签: text, search, url, telephone, email 以及 password。
+- multiple
+  - 规定是否可选择多个值
+  - 适用于以下类型的input标签: email 和 file。
 - autocomplete : 
   - 规定输入字段是否应该启用自动完成功能
   - 适用于以下类型的input标签: text, search, url, telephone, email, password, datepickers, range 以及 color。
@@ -154,8 +158,15 @@ input 元素使用 datalist 预定义值
   - 与 `type="submit"` 和 `type="image"` 配合使用
 - pattern (regexp)
   - 描述了一个正则表达式用于验证 `<input>` 元素的值
-  - 适用于以下类型的input标签: text, search, url, tel, email, 和 password
-- list : 规定输入域的 datalist
+  - 适用于以下类型的input标签: text, search, url, tel, email, 以及 password
+- list
+  - 规定输入域的 datalist
+  - 值为 datalist 的 id
 - height and width
-- min and max
+  - 规定用于 `image` 类型的 `<input>` 标签的图像高度和宽度。
+  - 与 `type="image"` 配合使用
+- min 、max
+  - 适用于以下类型的input标签: datepickers、number 以及 range。
 - step
+  - 为输入域规定合法的数字间隔
+  - 适用于以下类型的input标签: number, range, date, datetime, datetime-local, month, time 以及 week。
