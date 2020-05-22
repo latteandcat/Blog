@@ -148,17 +148,17 @@ module.exports = {
       {
         theme: ['blackCat'],
         width: 200,
-        height: 470,
+        height: 400,
         modelStyle: {
           position: 'fixed',
-          right: '110px',
+          right: '70px',
           bottom: '50px',
           opacity: '0.9' 
         },
         messageStyle: {
           position: 'fixed',
-          right: '110px',
-          bottom: '370px'
+          right: '70px',
+          bottom: '380px'
         },
         btnStyle: {
           bottom: '60px',

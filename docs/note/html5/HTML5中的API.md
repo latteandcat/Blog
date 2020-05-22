@@ -170,26 +170,30 @@ reader.onload=function() {
   - 多窗口共享
   - 容量大约为20M
   ```  
-  🎈window.localStorage.setItem(key,value)  设置存储内容
+  🎈window.localStorage.setItem(key,value) --> 设置存储内容
 
-  🎈window.localStorage.getItem(key)  		获取内容
+  🎈window.localStorage.getItem(key) --> 获取内容
 
-  🎈window.localStorage.removeItem(key)	    删除内容
+  🎈window.localStorage.removeItem(key) --> 删除内容
 
-  🎈window.localStorage.clear()			    清空内容
+  🎈window.localStorage.clear() --> 清空内容
+
+  🎈window.localStorage.key(index) --> 获取指定索引位置数据项的键名
   ```      
 - sessionStorage：
   - 生命周期为关闭当前浏览器窗口
   - 可以在同一个窗口下访问
   - 数据大小为5M左右
   ```
-  🎈window.sessionStorage.setItem(key,value)
+  🎈window.sessionStorage.setItem(key,value) --> 设置存储内容
   
-  🎈window.sessionStorage.getItem(key)
+  🎈window.sessionStorage.getItem(key) --> 获取内容
   
-  🎈window.sessionStorage.removeItem(key)
+  🎈window.sessionStorage.removeItem(key) --> 删除内容
   
-  🎈window.sessionStorage.clear()
+  🎈window.sessionStorage.clear() --> 清空内容
+
+  🎈window.sessionStorage.key(index) --> 获取指定索引位置数据项的键名
   ```
 
 ## 拖放
@@ -242,3 +246,34 @@ reader.onload=function() {
     ev.target.appendChild(document.getElementById(data));
   }
   ```
+
+## WebSocket
+
+### 介绍
+
+- `WebSocket` 是HTML5开始提供的一种在单个 TCP 连接上进行全双工通讯的协议。
+- 获取 `WebSocket` 连接后，可以通过 `send()` 方法来向服务器发送数据，并通过 `onmessage` 事件来接收服务器返回的数据。
+- 创建方法 `var Socket = new WebSocket(url, [protocal] );`
+  - `url`： 连接的 URL
+  - `protocal`： 可接受的协议（可选参数）
+
+### 属性
+
+- `readyState` 只读属性，表示连接状态
+  - 0：表示连接尚未建立。
+  - 1：表示连接已建立，可以进行通信。
+  - 2：表示连接正在进行关闭。
+  - 3：表示连接已经关闭或者连接不能打开。
+- `bufferedAmount` 只读属性，表示已被 `send()` 放入正在队列中等待传输，但是还没有发出的 `UTF-8` 文本字节数
+
+### 事件
+
+- `onopen` 连接建立时触发
+- `onmessage` 客户端接收服务端数据时触发
+- `onerror` 通信发生错误时触发
+- `onclose` 连接关闭时触发
+
+### 方法
+
+- `send()` 使用连接发送数据
+- `close()` 关闭连接

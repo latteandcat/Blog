@@ -56,7 +56,8 @@ export default {
       model: {
         blackCat:
           // 'https://assets.smallsunnyfox.com/models/live2d-widget-model-hijiki/assets/hijiki.model.json',
-          'https://assets.smallsunnyfox.com/models/model/HyperdimensionNeptunia/histoire/index.json',
+          // 'https://assets.smallsunnyfox.com/models/model/HyperdimensionNeptunia/histoire/index.json',
+          'https://assets.smallsunnyfox.com/models/model/liang/2.json',
         whiteCat:
           'https://assets.smallsunnyfox.com/models/live2d-widget-model-tororo/assets/tororo.model.json',
         haru1:
