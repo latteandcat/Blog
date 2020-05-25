@@ -10,6 +10,8 @@ categories:
 
 ## 背景
 
+CSS3更新了几个新的背景属性用来控制背景元素
+
 - `background-origin`: 规定背景图片的定位区域，可选值如下
   - `padding-box`  背景图像相对内边距定位（默认值）
   - `border-box`   背景图像相对边框定位【以边框左上角为参照进行位置设置】
@@ -31,8 +33,11 @@ categories:
 
 ## 边框
 
-- 边框圆角 `border-radius: 左上 右上 右下 坐下`;
-
+- 边框圆角 `border-radius: 左上 右上 右下 左下`;
+  - `border-top-left-radius` 左上
+  - `border-top-right-radius` 右上
+  - `border-bottom-right-radius` 右下
+  - `border-bottom-left-radius` 左下
 - 盒子阴影 `box-shadow: h-shadow v-shadow blur spread color inset`;
   - `h-shadow`: 必需的。代表阴影在水平方向的偏移量（正数向右，负数向左）
   - `v-shadow`: 必需的。代表阴影在垂直方向的偏移量（正数代表向下，负数代表向上）
@@ -43,9 +48,9 @@ categories:
 
 - 边框图片 `border-image: source slice width outset repeat`;
   - `border-image-source`: 设置边框图片
-  - `border-image-slice`: 边框图片裁切 : 不需要带单位
-  - `border-image-width`: 边框图片宽度
-  - `border-image-outset`: 指定在边框外部绘制 `border-image-area` 的量
+  - `border-image-slice: number|%|fill`: 指定图像的边界向内偏移
+  - `border-image-width: number|%|auto`: 边框图片宽度
+  - `border-image-outset: length|number`: 指定在边框外部绘制 `border-image-area` 的量
     - length
     - number代表相应的border-width 的倍数
   - `border-image-repeat`: 设置边框图片的平铺方式
@@ -76,7 +81,7 @@ categories:
 ## 渐变
 
 ### 线性渐变
-`background-image: linear-gradient(direction, color-stop1, color-stop2, ...);`
+`background: linear-gradient(direction, color-stop1, color-stop2, ...);`
 1. 开始颜色和结束颜色
    - 取值可以为关键字、十六进制颜色值、RGBA颜色等
 2. 渐变的方向 
@@ -122,7 +127,11 @@ categories:
   - `transform: skew(30deg, 30deg);`
   - 第一个值代表沿着x轴方向倾斜
   - 第二个值代表沿着y轴方向倾斜
-
+  - `skewX()` 表示只在X轴(水平方向)倾斜
+  - `skewY()` 表示只在Y轴(垂直方向)倾斜
+- `martix()`
+  - matrix 包含旋转，缩放，移动（平移）和倾斜功能
+  - martix 使用六个值的矩阵来定义2D转换
 ## 3D转换
 
 - 位移
@@ -131,8 +140,6 @@ categories:
   - `transform: rotateX(60deg)  rotateY(60deg)  rotateZ(60deg);`
 - 缩放
   - `transform: scaleX(0.5)  scaleY(1)  scaleZ(1);`
-- 倾斜
-  - `transform: skewX(30deg) skewY();`
 - 更改转换元素的位置
   - 2D转换元素可以改变元素的X和Y轴
   - 3D转换元素，还可以更改元素的Z轴
@@ -160,6 +167,8 @@ categories:
   - `backface-visibility: visible|hidden;`
     - `visible`: 默认值。 背面是可见的。
     - `hidden`: 背面是不可见的。
+- `matrix3d()`
+  - matrix3d 使用16个值的矩阵来定义3D转换
 
 ## 过渡
 CSS3 过渡是元素从一种样式逐渐改变为另一种的效果  
@@ -200,26 +209,26 @@ CSS3 过渡是元素从一种样式逐渐改变为另一种的效果
 `animation: name duration timing-function delay iteration-count direction fill-mode play-state;`
 
 - 动画名称
-  - `animation-name: keyframename|none;`
+  - `animation-name: keyframename|none`
   - `animation-name` 属性为 @keyframes 动画指定名称。
 - 动画周期
-  - `animation-duration: time;`
+  - `animation-duration: time`
   - `animation-duration` 定义动画完成一个周期需要多少秒或毫秒。
 - 动画速度曲线
-  - `animation-timing-function: linear|ease|ease-in|ease-out|cubic-bezier(n,n,n,n);`
+  - `animation-timing-function: linear|ease|ease-in|ease-out|cubic-bezier(n,n,n,n)`
   - `animation-timing-function` 指定动画速度曲线。
   - 速度曲线定义动画从一套 CSS 样式变为另一套所用的时间。
   - 速度曲线用于使变化更为平滑。
 - 动画开始时间
-  - `animation-delay: time;`
+  - `animation-delay: time`
   - `animation-delay` 属性定义动画什么时候开始。
   - `animation-delay` 值单位可以是秒（s）或毫秒（ms）。
   - 允许负值，-2s 使动画马上开始，但跳过 2 秒进入动画
 - 动画播放次数
-  - `animation-iteration-count: n | infinite;`
+  - `animation-iteration-count: n | infinite`
   - `animation-iteration-count` 属性定义动画应该播放多少次。
 - 动画循环方向
-  - `animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;`
+  - `animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit`
     - `normal` 默认值。动画按正常播放。
     - `reverse` 动画反向播放。
     - `alternate` 动画在奇数次正向播放，在偶数次反向播放。
@@ -279,23 +288,23 @@ CSS3 过渡是元素从一种样式逐渐改变为另一种的效果
 
 - `flex-direction`
   - `flex-direction` 属性决定主轴的方向（即项目的排列方向）。
-  - `flex-direction: row | row-reverse | column | column-reverse;`
+  - `flex-direction: row | row-reverse | column | column-reverse`
     - row（默认值）：主轴为水平方向，起点在左端。
     - row-reverse：主轴为水平方向，起点在右端。
     - column：主轴为垂直方向，起点在上沿。
     - column-reverse：主轴为垂直方向，起点在下沿。
 - `flex-wrap`
   - 默认情况下，项目都排在一条线（又称"轴线"）上。`flex-wrap`属性定义，如果一条轴线排不下，如何换行。
-  - `flex-wrap: nowrap | wrap | wrap-reverse;`
+  - `flex-wrap: nowrap | wrap | wrap-reverse`
     - nowrap（默认）：不换行。
     - wrap：换行，第一行在上方。
     - wrap-reverse：换行，第一行在下方。
 - `flex-flow`
   - `flex-flow`属性是`flex-direction`属性和`flex-wrap`属性的简写形式，默认值为`row nowrap`。
-  - `flex-flow: <flex-direction> || <flex-wrap>;`
+  - `flex-flow: <flex-direction> || <flex-wrap>`
 - `justify-content`
   - `justify-content` 属性定义了项目在主轴上的对齐方式。
-  - `justify-content: flex-start | flex-end | center | space-between | space-around;`
+  - `justify-content: flex-start | flex-end | center | space-between | space-around`
     - flex-start（默认值）：左对齐
     - flex-end：右对齐
     - center： 居中
@@ -303,7 +312,7 @@ CSS3 过渡是元素从一种样式逐渐改变为另一种的效果
     - space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。
 - `align-items`
   - `align-items` 属性定义项目在交叉轴上如何对齐。
-  - `align-items: flex-start | flex-end | center | baseline | stretch;`
+  - `align-items: flex-start | flex-end | center | baseline | stretch`
     - flex-start：交叉轴的起点对齐。
     - flex-end：交叉轴的终点对齐。
     - center：交叉轴的中点对齐。
@@ -311,7 +320,7 @@ CSS3 过渡是元素从一种样式逐渐改变为另一种的效果
     - stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。
 - `align-content`
   - `align-content` 属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
-  - `align-content: flex-start | flex-end | center | space-between | space-around | stretch;`
+  - `align-content: flex-start | flex-end | center | space-between | space-around | stretch`
     - flex-start：与交叉轴的起点对齐。
     - flex-end：与交叉轴的终点对齐。
     - center：与交叉轴的中点对齐。
@@ -334,7 +343,7 @@ CSS3 过渡是元素从一种样式逐渐改变为另一种的效果
   - 负值对该属性无效
 - `flex-basis`
   - `flex-basis` 属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
-  - `flex-basis: <length> | auto;`
+  - `flex-basis: number|%|auto;`
 - `flex`
   - `flex`属性是`flex-grow`, `flex-shrink` 和 `flex-basis`的简写，默认值为`0 1 auto`。
   - `flex-shrink` 和 `flex-basis`为可选属性。
