@@ -172,22 +172,16 @@ module.exports = {
       {
         audios: [
           {
-            name: '能够成家吗',
-            artist: '咖啡少年',
+            name: '不喜欢下雨天Remix',
+            artist: 'Piggy,Owen,DP龙猪',
             url: 'https://assets.smallsunnyfox.com/music/1.mp3',
             cover: 'https://assets.smallsunnyfox.com/music/1.jpg'
           },
           {
-            name: '江南地铁站4号出口',
-            artist: 'Plastic / Fallin` Dild',
+            name: 'Peaches',
+            artist: 'Justin Bieber',
             url: 'https://assets.smallsunnyfox.com/music/2.mp3',
             cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
-          },
-          {
-            name: '用胳膊当枕头',
-            artist: '최낙타',
-            url: 'https://assets.smallsunnyfox.com/music/3.mp3',
-            cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
           }
         ]
       }
@@ -201,6 +195,13 @@ module.exports = {
           message: "发现新内容可用",
           buttonText: "刷新"
         }
+      }
+    ],
+    [
+      'permalink-pinyin',
+      {
+        lowercase: true,
+        separator: '-'
       }
     ]
   ]
