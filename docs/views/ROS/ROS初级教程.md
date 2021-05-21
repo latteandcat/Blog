@@ -192,6 +192,8 @@ ROS服务是节点之间通讯的另一种方式，服务允许节点发送一�
   turtlemimic.launch中得内容
   ``` xml
   <launch>
+    <!-- 创建了两个分组，并以命名空间（namespace）标签来区分 -->
+    <!-- 两个分组中都有相同的名为sim的turtlesim节点。这样可以让我们同时启动两个turtlesim模拟器，而不会产生命名冲突 -->
     <!-- turtulesim1 -->
     <group ns="turtlesim1">
       <node pkg="turtlesim" name="sim" type="turtlesim_node"/>
@@ -211,9 +213,9 @@ ROS服务是节点之间通讯的另一种方式，服务允许节点发送一�
   ``` bash
   // 运行launch文件
   roslaunch beginner_tutorials turtlemimic.launch
-  // 发布命令使turtlesim1循环移动
+  // 发布命令给turtlesim1
   rostopic pub /turtlesim1/turtle1/cmd_vel geometry_msgs/Twist -r 1 -- '[2.0, 0.0, 0.0]' '[0.0, 0.0, -1.8]'
-  // 最终turtlesim2也随之移动
+  // /turtlesim1/sim => mimic =>  /turtlesim2/sim
   ```
 ## 使用rosed在ROS中编辑文件
 
@@ -434,4 +436,37 @@ msg目录中的任何.msg文件都将生成所有支持语言的代码。C++消�
   - 对比
     - rostopic极慢，ros_readbagfile脚本较快
     - rostopic一次只能读取单个话题，而ros_readbagfile脚本可以同时读取任意多的话题
+
+## roswtf入门
+
+- 用法：`roswtf` 可以检查你的系统并尝试发现问题
+- 输出信息
+  - package or stack in context
+  - Static checks summary  
+    报告任何关于文件系统或非运行时（比如无需roscore的场景）的问题
+  - Online graph checks
+    - roscore未运行时不会进行
+    - roscore在运行时会进行ROS图的在线检查，检查过程的长短取决于正在运行的ROS节点数量
+- `roswtf` 会对一些系统中看起来异常但可能是正常的运行情况发出警告，也会对确实有问题的情况报告错误  
+  Example
+  ```
+  roscd
+  ROS_PACKAGE_PATH=bad:$ROS_PACKAGE_PATH
+  roswtf
+  ```
+  检查信息
+  ```
+  Stack: ros
+  ================================================================================
+  Static checks summary:
+
+  Found 1 error(s).
+
+  ERROR Not all paths in ROS_PACKAGE_PATH [bad] point to an existing directory: 
+   * bad
+
+  ================================================================================
+
+  Cannot communicate with master, ignoring graph checks
+  ```
 
