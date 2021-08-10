@@ -10,11 +10,11 @@ categories:
 
 ## ROS文件系统
 
-### 软件包
-包是ROS代码的软件组织单元，每个软件包都可以包含程序库、可执行文件、脚本或其他构件。
-### Manifests
-清单（Manifest）是对软件包的描述。它用于定义软件包之间的依赖关系，并记录有关软件包的元信息，如版本、维护者、许可证等。
-### 内置命令工具
+- 软件包  
+  包是ROS代码的软件组织单元，每个软件包都可以包含程序库、可执行文件、脚本或其他构件。
+- Manifests  
+  清单（Manifest）是对软件包的描述。它用于定义软件包之间的依赖关系，并记录有关软件包的元信息，如版本、维护者、许可证等。
+- 内置命令工具
   - rospack
   获取软件包的所在路径 `rospack find [package_name]`
   - roscd
@@ -189,7 +189,7 @@ ROS服务是节点之间通讯的另一种方式，服务允许节点发送一�
   // 创建launch文件
   touch turtlemimic.launch
   ```
-  turtlemimic.launch中得内容
+  turtlemimic.launch
   ``` xml
   <launch>
     <!-- 创建了两个分组，并以命名空间（namespace）标签来区分 -->

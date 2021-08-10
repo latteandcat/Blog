@@ -30,7 +30,7 @@
       </div>
       <div v-show="cur === 'work'">
         <ul>
-          <li><img src="../public/star.png"><span>2019.06 ~ 2020.07：work at yioks</span></li>
+          <li><img src="../public/star.png"><span>2019.06 ~ 2020.07：yioks-前端工程师</span></li>
         </ul>
       </div>
       <div v-show="cur === 'orange'">
@@ -51,7 +51,9 @@
       <div v-show="cur === 'book'">
         我在看的
         <ul>
-          <li><img src="../public/star.png"><span>人生海海</span></li>
+          <li><img src="../public/star.png"><span>月光落在左手上 - 余秀华</span></li>
+          <li><img src="../public/star.png"><span>青苔不会消失 - 袁凌</span></li>
+          <li><img src="../public/star.png"><span>纵身入山海 - 库索</span></li>
         </ul>
         我喜欢的
         <ul>
@@ -59,25 +61,19 @@
           <li><img src="../public/star.png"><span>文学</span></li>
           <li><img src="../public/star.png"><span>爱情</span></li>
         </ul>
-        2021书单
+        2021
         <ul>
-          <li><img src="../public/star.png"><span>万人如海一身藏</span></li>
-          <li><img src="../public/star.png"><span>春日序曲</span></li>
-          <li><img src="../public/star.png"><span>漫长的告别</span></li>
-          <li><img src="../public/star.png"><span>喜鹊谋杀案</span></li>
-          <li><img src="../public/star.png"><span>尤尔小屋的猫</span></li>
-          <li><img src="../public/star.png"><span>熊镇</span></li>
-          <li><img src="../public/star.png"><span>我爱这哭不出来的浪漫</span></li>
+          <li><img src="../public/star.png"><span>告白 - 凑佳苗</span></li>
+          <li><img src="../public/star.png"><span>我们生活在巨大的差距里 - 余华</span></li>
         </ul>
       </div>
       <div v-show="cur === 'tv'">
-        我在追的
+        2021
         <ul>
-          <li><img src="../public/star.png"><span>高等rapper4</span></li>
-          <!-- <li><img src="../public/star.png"><span>如实陈述</span></li>
-          <li><img src="../public/star.png"><span>梨泰院Class</span></li>
-          <li><img src="../public/star.png"><span>检察官内传</span></li>
-          <li><img src="../public/star.png"><span>浪客行</span></li> -->
+          <li><img src="../public/star.png"><span>这区域的疯子X</span></li>
+          <li><img src="../public/star.png"><span>远看是蔚蓝的春天</span></li>
+          <li><img src="../public/star.png"><span>机智的医生生活2</span></li>
+          <li><img src="../public/star.png"><span>Voice4</span></li>
         </ul>
       </div>
       <div v-show="cur === 'movie'">
