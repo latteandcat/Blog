@@ -6,33 +6,11 @@ $boxShadowHover = 0 2px 16px 0 rgba(0, 0, 0, 0.2)
 $textShadow = 0 2px 4px rgba(0, 0, 0, 0.2);
 $borderRadius = .25rem 
 */
-/* 鼠标样式
-body {
-  cursor: url(/pointer/normal.cur),auto;
-}
-.sidebar-heading,
-.about .aboutNav .aboutNavItem,
-.timeline-wrapper .year-wrapper li:hover .title,
-.comments-wrapper .valine-wrapper #valine.v .vlist .vh .vmeta .vat,
-.v .vlist .vcard .vhead .vnick,
-.theme-container .tags span,
-.dropdown-wrapper,
-.navbar .links .screenfull,
-.pagation-list .jump,
-.kanbanniang .banniang-container .operation i,
-.kanbanniang .banniang-container .operation,
-.showBanNiang,
-.search-box .suggestions li,
-.info-wrapper .tags span, .back-to-ceiling, a, button {
-  cursor: url(/pointer/link.cur),auto!important;
-}
-textarea, input {
-  cursor: url(/pointer/text.cur),auto!important;
-} */
 
 // 首页图片上文字颜色
 .home-blog .hero h1, .home-blog .hero .description, .home-blog .hero .action {
-  color: #FF66CC!important
+  // color: #FF66CC!important
+  color:rgba(255,255,255,0)!important
 }
 // 文章和标签中间的竖线
 .home-blog .home-blog-wrapper .info-wrapper .num > div:first-child {
@@ -57,24 +35,14 @@ textarea, input {
   box-shadow: none!important;
 }
 .comments-wrapper .valine-wrapper #valine.v .vlist .vh .vmeta .vat {
-  box-shadow: none!important;
+  box-shadow: nonec;
 }
 
-/* @font-face
-{
-	font-family: MEOW;
-	src: url('/FZSJ-XIANGNX.ttf');
+.navbar {
+  background: #FFAFBD!important;
+  background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD)!important;
+  background: linear-gradient(to right, #ffc3a0, #FFAFBD)!important;
 }
-
-body, html ,.tags .tag-item, .iconfont span, .valine-wrapper{
-  font-family: MEOW, Ubuntu, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif!important;
+header .links {
+  background-color:transparent!important;
 }
-
-.navbar .links a,
-.footer-wrapper a,
-.info-wrapper h3,
-.info-wrapper h4,
-.info-wrapper h6
-{
-  font-weight: 600!important;
-} */

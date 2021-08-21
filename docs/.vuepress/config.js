@@ -30,15 +30,21 @@ module.exports = {
       {
         title: '午后南杂',
         desc: 'Enjoy when you can, and endure when you must.',
-        email: '1156743527@qq.com',
+        logo: 'https://assets.smallsunnyfox.com/images/reco.png',
         link: 'https://www.recoluan.com'
       },
       {
         title: 'vuepress-theme-reco',
         desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar: "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        logo: "https://assets.smallsunnyfox.com/images/theme_reco.png",
         link: 'https://vuepress-theme-reco.recoluan.com'
       },
+      {
+        title: 'L1nSn0w’s Blog',
+        desc: '一名热爱计算机与iOS的高中生',
+        logo: "https://assets.smallsunnyfox.com/images/lin_snow.png",
+        link: 'https://l1nsn0w.gitee.io'
+      }
     ],
     // 博客设置
     blogConfig: {
@@ -51,7 +57,7 @@ module.exports = {
         text: 'Tag' // 默认 “标签”
       }
     },
-    logo: '/head2.png',
+    logo: '/head.png',
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -121,7 +127,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     // 作者
     author: '橘子',
-    authorAvatar: '/head2.png',
+    authorAvatar: '/head.png',
     // 备案号
     record: '豫ICP备19035192号',
     recordLink: 'http://www.beian.miit.gov.cn/',
@@ -144,44 +150,44 @@ module.exports = {
     lineNumbers: true
   },
   plugins: [
-    // [
-    //   require('./plugins/KanBanNiang'),
-    //   {
-    //     theme: ['blackCat'],
-    //     width: 200,
-    //     height: 400,
-    //     modelStyle: {
-    //       position: 'fixed',
-    //       right: '70px',
-    //       bottom: '50px',
-    //       opacity: '0.9' 
-    //     },
-    //     messageStyle: {
-    //       position: 'fixed',
-    //       right: '70px',
-    //       bottom: '380px'
-    //     },
-    //     btnStyle: {
-    //       bottom: '60px',
-    //       right: '80px'
-    //     }
-    //   }
-    // ],
+    /* [
+      require('./plugins/KanBanNiang'),
+      {
+        theme: ['blackCat'],
+        width: 200,
+        height: 400,
+        modelStyle: {
+          position: 'fixed',
+          right: '70px',
+          bottom: '50px',
+          opacity: '0.9' 
+        },
+        messageStyle: {
+          position: 'fixed',
+          right: '70px',
+          bottom: '380px'
+        },
+        btnStyle: {
+          bottom: '60px',
+          right: '80px'
+        }
+      }
+    ], */
     [
       require('./plugins/BgMusic'),
       {
         audios: [
           {
-            name: '不喜欢下雨天Remix',
-            artist: 'Piggy,Owen,DP龙猪',
-            url: 'https://assets.smallsunnyfox.com/music/1.mp3',
-            cover: 'https://assets.smallsunnyfox.com/music/1.jpg'
+            name: '我再没见过 像你一般的星空',
+            artist: 'Seto',
+            url: 'https://assets.smallsunnyfox.com/music/Seto我再没见过像你一般的星空.mp3',
+            cover: 'https://assets.smallsunnyfox.com/music/1.png'
           },
           {
-            name: 'Peaches',
-            artist: 'Justin Bieber',
-            url: 'https://assets.smallsunnyfox.com/music/2.mp3',
-            cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
+            name: '萤火之森',
+            artist: 'CMJ',
+            url: 'https://assets.smallsunnyfox.com/music/CMJ萤火之森.mp3',
+            cover: 'https://assets.smallsunnyfox.com/music/2.png'
           }
         ]
       }
