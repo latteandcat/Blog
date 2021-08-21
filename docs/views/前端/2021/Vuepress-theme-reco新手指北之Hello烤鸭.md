@@ -20,6 +20,26 @@ sticky: 2
 
 [Vuepress中文网-指南-快速上手](https://www.vuepress.cn/guide/getting-started.html)
 
+### 初始化
+
+```
+mkdir vuepress-theme-reco-starter
+
+cd vuepress-theme-reco-starter
+
+npm init # yarn init
+
+npm install -D vuepress # yarn add -D vuepress
+
+```
+### 在package.json中添加script
+```
+"scripts": {
+  "docs:dev": "vuepress dev docs",
+  "docs:build": "vuepress build docs"
+}
+```
+
 ## 安装vuepress-theme-reco
 
 [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/views/1.x/installUse.html)
