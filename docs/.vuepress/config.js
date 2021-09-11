@@ -22,7 +22,7 @@ module.exports = {
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'Notes', link: '/note/', icon: 'reco-document' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
-      { text: 'PhotoAlbum', link: 'http://photo.smallsunnyfox.com/', icon: 'reco-blog'},
+      { text: 'PhotoAlbum', link: 'https://photo.smallsunnyfox.com/', icon: 'reco-blog'},
       { text: 'About', link: '/about/', icon: 'reco-account'},
       { text: 'GitHub', link: 'https://github.com/smallsunnyfox', icon: 'reco-github' }
     ],
@@ -30,19 +30,19 @@ module.exports = {
       {
         title: '午后南杂',
         desc: 'Enjoy when you can, and endure when you must.',
-        logo: 'https://assets.smallsunnyfox.com/images/reco.png',
+        logo: 'https://photo.smallsunnyfox.com/images/blog/friendlink/reco.png',
         link: 'https://www.recoluan.com'
       },
       {
         title: 'vuepress-theme-reco',
         desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        logo: "https://assets.smallsunnyfox.com/images/theme_reco.png",
+        logo: "https://photo.smallsunnyfox.com/images/blog/friendlink/theme_reco.png",
         link: 'https://vuepress-theme-reco.recoluan.com'
       },
       {
         title: 'L1nSn0w’s Blog',
         desc: '一名热爱计算机与iOS的高中生',
-        logo: "https://assets.smallsunnyfox.com/images/lin_snow.png",
+        logo: "https://photo.smallsunnyfox.com/images/blog/friendlink/lin_snow.png",
         link: 'https://l1nsn0w.gitee.io'
       }
     ],
@@ -57,7 +57,7 @@ module.exports = {
         text: 'Tag' // 默认 “标签”
       }
     },
-    logo: '/head.png',
+    logo: 'https://photo.smallsunnyfox.com/images/blog/head.png',
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -127,7 +127,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     // 作者
     author: '橘子',
-    authorAvatar: '/head.png',
+    authorAvatar: 'https://photo.smallsunnyfox.com/images/blog/head.png',
     // 备案号
     record: '豫ICP备19035192号',
     recordLink: 'https://beian.miit.gov.cn/',

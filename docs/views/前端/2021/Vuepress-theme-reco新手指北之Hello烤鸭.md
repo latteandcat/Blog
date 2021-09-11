@@ -13,7 +13,7 @@ sticky: 2
 ::: tip
 [一键烤鸭-Github](https://github.com/smallsunnyfox/vuepress-theme-reco-starter)  
 效果预览
-![](https://assets.smallsunnyfox.com/images/vuepress-theme-reco-starter-review.png)
+![](https://photo.smallsunnyfox.com/images/blog/views/vuepress-theme-reco-starter-review.png)
 :::
 
 ## 安装vuepress
@@ -134,13 +134,13 @@ module.exports = {
       {
         title: '午后南杂',
         desc: 'Enjoy when you can, and endure when you must.',
-        logo: 'https://assets.smallsunnyfox.com/images/reco.png',
+        logo: 'https://photo.smallsunnyfox.com/images/blog/friendlink/reco.png',
         link: 'https://www.recoluan.com'
       },
       {
         title: 'vuepress-theme-reco',
         desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        logo: "https://assets.smallsunnyfox.com/images/theme_reco.png",
+        logo: "https://photo.smallsunnyfox.com/images/blog/friendlink/theme_reco.png",
         link: 'https://vuepress-theme-reco.recoluan.com'
       }
     ]
