@@ -44,6 +44,12 @@ module.exports = {
         desc: '一名热爱计算机与iOS的高中生',
         logo: 'https://photo.smallsunnyfox.com/images/blog/friendlink/lin_snow.png',
         link: 'https://l1nsn0w.gitee.io'
+      },
+      {
+        title: 'ImCao',
+        desc: 'NUAA大佬',
+        logo: 'https://www.imcao.cn/avatar.png',
+        link: 'https://www.imcao.cn/'
       }
     ],
     // 博客设置
