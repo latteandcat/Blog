@@ -63,7 +63,7 @@ module.exports = {
         text: 'Tag' // 默认 “标签”
       }
     },
-    logo: 'https://photo.smallsunnyfox.com/images/blog/head.png',
+    logo: 'https://photo.smallsunnyfox.com/images/blog/logo.png',
     // 搜索设置
     search: true,
     searchMaxSuggestions: 10,
@@ -109,7 +109,7 @@ module.exports = {
     lastUpdated: 'Last Updated',
     // 作者
     author: '橘子',
-    authorAvatar: 'https://photo.smallsunnyfox.com/images/blog/head.png',
+    authorAvatar: 'https://photo.smallsunnyfox.com/images/blog/logo.png',
     // 备案号
     record: '豫ICP备19035192号',
     recordLink: 'https://beian.miit.gov.cn/',

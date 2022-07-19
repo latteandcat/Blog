@@ -1,23 +1,21 @@
 <template>
   <div class="about">
     <ul class="aboutNav">
-      <li
-        v-for="item in nav"
-        @click="showNav(item.code)"
-        :style="cur === item.code ? 'background:#FF66CC;color:#fff;' : ''"
-        class="aboutNavItem">
+      <li v-for="item in nav" @click="showNav(item.code)" :style="cur === item.code ? 'background:#0567f1;color:#fff;' : ''" class="aboutNavItem">
         {{item.title}}
       </li>
     </ul>
     <div class="aboutContent">
       <div v-show="cur === 'me'">
         <ul class="colors">
-          <li class="midnightblue">midnightblue</li>
-          <li class="blue">blue</li>
-          <li class="deepskyblue">deepskyblue</li>
-          <li class="cornflowerblues">cornflowerblue</li>
-          <li class="lightskyblue">lightskyblue</li>
-        </ul>      
+          <li class="midnightblue">研二在读</li>
+          <li class="slateblue">养过一只猫咪</li>
+          <li class="blue">学过一些前端</li>
+          <li class="deepskyblue">爱过一些路人</li>
+          <li class="cornflowerblues">玩过很多游戏</li>
+          <li class="lightskyblue">看过很多书籍</li>
+          <li class="wuwangcaoblue">还是在寻找自己</li>
+        </ul>
       </div>
       <div v-show="cur === 'tech'">
         <ul>
@@ -30,7 +28,9 @@
       </div>
       <div v-show="cur === 'work'">
         <ul>
-          <li><img src="../public/star.png"><span>2019.06 ~ 2020.07：yioks-前端工程师</span></li>
+          <li><img src="../public/star.png"><span>2015.09 ~ 2019.06: zzu-undergraduate</span></li>
+          <li><img src="../public/star.png"><span>2019.06 ~ 2020.07: yioks-前端工程师</span></li>
+          <li><img src="../public/star.png"><span>2021.09 ~ now: zzu-postgraduate</span></li>
         </ul>
       </div>
       <div v-show="cur === 'orange'">
@@ -52,14 +52,16 @@
         我在看的
         <ul>
           <li><img src="../public/star.png"><span>月光落在左手上 - 余秀华</span></li>
-          <li><img src="../public/star.png"><span>青苔不会消失 - 袁凌</span></li>
-          <li><img src="../public/star.png"><span>纵身入山海 - 库索</span></li>
         </ul>
         我喜欢的
         <ul>
           <li><img src="../public/star.png"><span>推理</span></li>
           <li><img src="../public/star.png"><span>文学</span></li>
           <li><img src="../public/star.png"><span>爱情</span></li>
+        </ul>
+        2022
+        <ul>
+          <li><img src="../public/star.png"><span>天堂旅行团 - 张嘉佳</span></li>
         </ul>
         2021
         <ul>
@@ -68,8 +70,15 @@
         </ul>
       </div>
       <div v-show="cur === 'tv'">
+        2022
+        <ul>
+          <li><img src="../public/star.png"><span>奇怪的律师禹英雨</span></li>
+          <li><img src="../public/star.png"><span>流星</span></li>
+          <li><img src="../public/star.png"><span>为何是吴秀才</span></li>
+        </ul>
         2021
         <ul>
+          <li><img src="../public/star.png"><span>顶级高校</span></li>
           <li><img src="../public/star.png"><span>这区域的疯子X</span></li>
           <li><img src="../public/star.png"><span>远看是蔚蓝的春天</span></li>
           <li><img src="../public/star.png"><span>机智的医生生活2</span></li>
@@ -81,7 +90,7 @@
         <ul>
           <li><img src="../public/star.png"><span>陪你度过漫长岁月</span></li>
           <li><img src="../public/star.png"><span>恋恋笔记本</span></li>
-          <li><img src="../public/star.png"><span>比悲伤更悲伤的故事（More than blue）</span></li>
+          <li><img src="../public/star.png"><span>比悲伤更悲伤的故事 (More than blue)</span></li>
         </ul>
       </div>
       <div v-show="cur === 'game'">
@@ -89,6 +98,8 @@
         <ul>
           <li><img src="../public/star.png"><span>LOL</span></li>
           <li><img src="../public/star.png"><span>CSGO</span></li>
+          <li><img src="../public/star.png"><span>永劫无间</span></li>
+          <li><img src="../public/star.png"><span>原神</span></li>
         </ul>
       </div>
     </div>
@@ -96,26 +107,26 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        nav: [
-          { title: '关于我', code: 'me' },
-          { title: '技能', code: 'tech' },
-          { title: '工作', code: 'work' },
-          { title: '橘子', code: 'orange' },
-          { title: '书', code: 'book' },
-          { title: '剧', code: 'tv' },
-          { title: '电影', code: 'movie' },
-          { title: '游戏', code: 'game' }
-        ],
-        cur: 'me'
-      }
-    },
-    methods: {
-      showNav(code) {
-        this.cur = code
-      } 
+export default {
+  data() {
+    return {
+      nav: [
+        { title: '关于我', code: 'me' },
+        { title: '技能', code: 'tech' },
+        { title: '工作', code: 'work' },
+        { title: '橘子', code: 'orange' },
+        { title: '书', code: 'book' },
+        { title: '剧', code: 'tv' },
+        { title: '电影', code: 'movie' },
+        { title: '游戏', code: 'game' }
+      ],
+      cur: 'me'
+    }
+  },
+  methods: {
+    showNav(code) {
+      this.cur = code
     }
   }
+}
 </script>
