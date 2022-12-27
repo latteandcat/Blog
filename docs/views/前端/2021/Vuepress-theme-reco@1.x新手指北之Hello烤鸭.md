@@ -1,5 +1,5 @@
 ---
-title: Vuepress-theme-reco 新手指北之 Hello烤鸭
+title: Vuepress-theme-reco@1.x 新手指北之Hello烤鸭
 date: 2021-08-21
 sidebar: auto
 tags: 
@@ -14,6 +14,7 @@ sticky: 2
 [一键烤鸭-Github](https://github.com/smallsunnyfox/vuepress-theme-reco-starter)  
 效果预览
 ![](https://photo.smallsunnyfox.com/images/blog/views/vuepress-theme-reco-starter-review.png)
+2022-12-27 测试成功
 :::
 
 ## 安装vuepress
@@ -28,8 +29,6 @@ mkdir vuepress-theme-reco-starter
 cd vuepress-theme-reco-starter
 
 npm init # yarn init
-
-npm install -D vuepress # yarn add -D vuepress
 
 ```
 ### 在package.json中添加script
