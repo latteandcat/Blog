@@ -11,7 +11,7 @@ sticky: 2
 ---
 
 ::: tip
-[一键烤鸭-Github](https://github.com/smallsunnyfox/vuepress-theme-reco-starter)  
+[一键烤鸭-Github](https://github.com/latteandcat/vuepress-theme-reco-starter)  
 效果预览
 ![](https://photo.smallsunnyfox.com/images/blog/views/vuepress-theme-reco-starter-review.png)
 2022-12-27 测试成功
@@ -115,7 +115,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
-      { text: 'GitHub', link: 'https://github.com/smallsunnyfox/vuepress-theme-reco-starter', icon: 'reco-github' }
+      { text: 'GitHub', link: 'https://github.com/latteandcat/vuepress-theme-reco-starter', icon: 'reco-github' }
     ],
     // 博客配置
     blogConfig: {

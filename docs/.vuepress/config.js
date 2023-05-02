@@ -20,11 +20,11 @@ module.exports = {
     huawei: false,
     nav: [
       { text: 'Home', link: '/', icon: 'reco-home' },
-      { text: 'Notes', link: '/note/', icon: 'reco-document' },
+      { text: 'Note', link: '/note/', icon: 'reco-document' },
       { text: 'TimeLine', link: '/timeline/', icon: 'reco-date' },
       { text: 'PhotoAlbum', link: 'https://photo.smallsunnyfox.com/', icon: 'reco-blog' },
       { text: 'About', link: '/about/', icon: 'reco-account' },
-      { text: 'GitHub', link: 'https://github.com/smallsunnyfox', icon: 'reco-github' }
+      { text: 'GitHub', link: 'https://github.com/latteandcat', icon: 'reco-github' }
     ],
     friendLink: [
       {
@@ -97,11 +97,6 @@ module.exports = {
           title: '前端单元测试',
           collapsable: true,
           children: ['fe-unit-test/chai', 'fe-unit-test/mocha', 'fe-unit-test/vueTestUtils']
-        },
-        {
-          title: '微信小程序',
-          collapsable: true,
-          children: ['wechat-mini-program/初识微信小程序']
         }
       ]
     },

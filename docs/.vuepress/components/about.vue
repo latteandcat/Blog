@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <ul class="aboutNav">
-      <li v-for="item in nav" @click="showNav(item.code)" :style="cur === item.code ? 'background:#0567f1;color:#fff;' : ''" class="aboutNavItem">
+      <li v-for="item in nav" :key="item.title" @click="showNav(item.code)" :style="cur === item.code ? 'background:#0567f1;color:#fff;' : ''" class="aboutNavItem">
         {{item.title}}
       </li>
     </ul>

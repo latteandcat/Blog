@@ -255,7 +255,7 @@ package.json
 
 ## 相关链接
 
-[练习项目](https://github.com/smallsunnyfox/frontend-unit-test)
+[练习项目](https://github.com/latteandcat/frontend-unit-test)
 
 [Istanbul官网](https://istanbul.js.org/)
 
