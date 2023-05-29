@@ -2,9 +2,9 @@
 title: HTML5中的API
 date: 2019-09-14
 tags:
- - Html5
+ - HTML5
 categories:
- - 笔记
+ - 前端
 ---
 
 ## 获取页面元素

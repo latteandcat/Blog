@@ -2,10 +2,10 @@
 title: Vue组件
 date: 2020-03-31
 tags:
- - js
+ - JS
  - Vue
 categories:
- - 笔记
+ - 前端
 ---
 
 ## 组件注册

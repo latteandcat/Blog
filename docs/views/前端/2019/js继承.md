@@ -2,9 +2,9 @@
 title: JS继承
 sidebarDepth: 2
 tags:
- - js
+ - JS
 categories:
- - 笔记
+ - 前端
 date: 2019-11-12
 publish: false
 ---

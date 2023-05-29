@@ -1,9 +1,9 @@
 ---
 title: JS对象
 tags:
- - js
+ - JS
 categories:
- - 笔记
+ - 前端
 date: 2019-11-12
 ---
 

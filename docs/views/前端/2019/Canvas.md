@@ -3,9 +3,9 @@ title: Canvas
 date: 2019-09-10
 tags:
  - Canvas
- - Html5
+ - HTML5
 categories:
- - 笔记
+ - 前端
 ---
 
 ## 绘图工具

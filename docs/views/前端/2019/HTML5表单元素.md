@@ -3,9 +3,9 @@ title: HTML5表单元素
 date: 2019-09-11
 sidebarDepth: 2
 tags:
- - Html5
+ - HTML5
 categories:
- - 笔记
+ - 前端
 ---
 ## 新的表单元素
 

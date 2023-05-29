@@ -2,10 +2,10 @@
 title: Vue.js基础笔记
 date: 2020-01-09
 tags:
- - js
+ - JS
  - Vue
 categories:
- - 笔记
+ - 前端
 ---
 
 ## Vue模板语法

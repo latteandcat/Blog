@@ -1,9 +1,9 @@
 ---
 title: JS原型链、闭包
 tags:
- - js
+ - JS
 categories:
- - 笔记
+ - 前端
 date: 2019-10-14
 ---
 
