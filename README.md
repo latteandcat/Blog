@@ -1,5 +1,16 @@
-# latte and cat
-
-博客搭建工具: [VuePress](https://vuepress.vuejs.org/zh/)  
-博客使用主题: [vuepress-theme-reco](https://vuepress-theme-reco.recoluan.com/)  
-主题作者: [reco_luan](https://github.com/recoluan)
+---
+home: true
+modules:
+  - BannerBrand
+  - Blog
+  - Footer
+bannerBrand:
+  bgImage: '/bg.png'
+  title: latte and cat
+  description: life is like a cup of latte, and cat will make it unlonely
+blog:
+  socialLinks:
+    - { icon: 'LogoGithub', link: 'https://github.com/latteandcat' }
+footer:
+  startYear: 2019
+---
