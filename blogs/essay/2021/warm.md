@@ -5,7 +5,7 @@ tags:
  - 生活
 categories:
  - 随笔
-next: false
+next: /blogs/essay/2023/cloud
 prev: /blogs/essay/2020/university
 ---
 
