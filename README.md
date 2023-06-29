@@ -5,7 +5,7 @@ modules:
   - Blog
   - Footer
 bannerBrand:
-  bgImage: '/bg.png'
+  bgImage: '/bg.jpg'
   title: latte and cat
   description: life is like a cup of latte, and cat will make it unlonely
 blog:
