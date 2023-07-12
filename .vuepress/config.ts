@@ -41,7 +41,8 @@ export default defineUserConfig({
         categoryId: 'DIC_kwDODyTg784CXXQ8',
         mapping: 'title',
         strict: '1',
-        lang: 'zh-CN'
+        lang: 'zh-CN',
+        crossorigin: 'anonymous'
       }
     }
   })
