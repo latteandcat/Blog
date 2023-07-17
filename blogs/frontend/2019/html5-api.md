@@ -1,6 +1,6 @@
 ---
 title: HTML5中的API
-date: 2019/09/14
+date: 2019-09-14
 tags:
  - 前端
  - HTML5

@@ -1,6 +1,6 @@
 ---
 title: Vuepress-theme-reco-v1.x 新手指北之Hello烤鸭
-date: 2023/05/29
+date: 2023-05-29
 tags: 
  - Vuepress
  - Vuepress-theme-reco

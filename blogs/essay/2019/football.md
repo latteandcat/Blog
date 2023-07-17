@@ -1,6 +1,6 @@
 ---
 title: 足球与摇滚乐
-date: 2019/07/14
+date: 2019-07-14
 tags: 
  - 生活
 categories:

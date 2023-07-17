@@ -1,6 +1,6 @@
 ---
 title: Vue组件
-date: 2020/03/31
+date: 2020-03-31
 tags:
  - 前端
  - JavaScript

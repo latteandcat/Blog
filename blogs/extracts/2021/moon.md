@@ -1,6 +1,6 @@
 ---
 title: 《月光落在左手上》 --- 摘记
-date: 2021/08/05
+date: 2021-08-05
 tags: 
  - 诗集
 categories:

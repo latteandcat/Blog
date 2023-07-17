@@ -1,6 +1,6 @@
 ---
 title: ROS初级教程
-date: 2021/05/19
+date: 2021-05-19
 tags: 
  - ROS
 categories:

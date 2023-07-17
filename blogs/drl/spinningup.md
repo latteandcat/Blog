@@ -1,6 +1,6 @@
 ---
 title: Spinning Up as a Deep RL Researcher（译） 
-date: 2022/08/16
+date: 2022-08-16
 tags: 
  - DRL
 categories:

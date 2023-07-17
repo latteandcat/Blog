@@ -1,6 +1,6 @@
 ---
 title: 记我的大学
-date: 2020/03/24
+date: 2020-03-24
 tags: 
  - 生活
 categories:

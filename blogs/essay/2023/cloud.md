@@ -1,6 +1,6 @@
 ---
 title: 今天的天空像夹心饼干
-date: 2023/06/25
+date: 2023-06-25
 tags: 
  - 生活
 categories:

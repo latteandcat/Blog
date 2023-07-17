@@ -1,6 +1,6 @@
 ---
 title: 没有理想的人不伤心
-date: 2019/08/04
+date: 2019-08-04
 tags: 
  - 生活
 categories:

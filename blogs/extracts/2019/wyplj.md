@@ -1,6 +1,6 @@
 ---
 title: 《我亦飘零久》 --- 摘记
-date: 2019/07/26
+date: 2019-07-26
 tags: 
  - 句子
 categories:

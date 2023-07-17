@@ -1,6 +1,6 @@
 ---
 title: CSS3新特性
-date: 2019/09/08
+date: 2019-09-08
 tags:
  - 前端
  - CSS3

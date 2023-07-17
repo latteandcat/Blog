@@ -15,21 +15,25 @@ export default defineUserConfig({
     authorAvatar: "/head.png",
     lastUpdatedText: "最近更新",
     series: {
-      "/docs/notes/": [
+      "/docs/algo-challenge/ch1-linklist/": [
         {
-          text: "module one",
-          children: ["home", "theme"],
-        },
-        {
-          text: "module two",
-          children: ["api", "plugin"],
-        },
-      ],
+          text: "第一关｜原来链表这么有用",
+          children: ["basic", "hf-questions"],
+        }
+      ]
     },
     navbar: [
       { text: "首页", link: "/", icon: "Home" },
       { text: "分类", link: "/categories/qianduan/1/", icon: "Category" },
       { text: "标签", link: "/tags/qianduan/1/", icon: "Tag" },
+      {
+        text: "算法",
+        icon: "ToolsAlt",
+        children: [
+          { text: "编程导航算法通关村", link: "/docs/algo-challenge/ch1-linklist/basic" }
+        ]
+      },
+      { text: '时间轴', link: '/timeline', icon: 'Time' },
       { text: '留言板', link: '/docs/message-board', icon: 'Chat' }
     ],
     commentConfig: {

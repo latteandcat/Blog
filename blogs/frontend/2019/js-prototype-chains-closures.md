@@ -5,7 +5,7 @@ tags:
  - JavaScript
 categories:
  - 前端
-date: 2019/10/14
+date: 2019-10-14
 ---
 
 ## 原型链
