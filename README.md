@@ -16,5 +16,7 @@ blog:
 footer:
   record: 豫ICP备2023015407号
   recordLink: https://beian.miit.gov.cn
+  cyberSecurityRecord: 豫公网安备41172602000204号
+  cyberSecurityLink: https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41172602000204
   startYear: 2019
 ---

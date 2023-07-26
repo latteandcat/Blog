@@ -15,10 +15,18 @@ export default defineUserConfig({
     authorAvatar: "/head.png",
     lastUpdatedText: "最近更新",
     series: {
-      "/docs/algo-challenge/ch1-linklist/": [
+      "/docs/algo-challenge/": [
+        {
+          text: "编程导航算法通关村",
+          children: ["/docs/algo-challenge/ch0-intro/intro", "/docs/algo-challenge/ch0-intro/warmup"]
+        },
         {
           text: "第一关｜原来链表这么有用",
-          children: ["basic", "hf-questions"],
+          children: ["/docs/algo-challenge/ch1-linklist/basic", "/docs/algo-challenge/ch1-linklist/hf-questions", "/docs/algo-challenge/ch1-linklist/ring"],
+        },
+        {
+          text: "第二关｜反转链表",
+          children: ["/docs/algo-challenge/ch2-reverselist/basic", "/docs/algo-challenge/ch2-reverselist/extension", "/docs/algo-challenge/ch2-reverselist/kgroup"],
         }
       ]
     },
@@ -30,7 +38,7 @@ export default defineUserConfig({
         text: "算法",
         icon: "ToolsAlt",
         children: [
-          { text: "编程导航算法通关村", link: "/docs/algo-challenge/ch1-linklist/basic" }
+          { text: "编程导航算法通关村", link: "/docs/algo-challenge/ch0-intro/intro" }
         ]
       },
       { text: '时间轴', link: '/timeline', icon: 'Time' },
