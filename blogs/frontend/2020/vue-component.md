@@ -1,5 +1,5 @@
 ---
-title: Vue组件
+title: Vue组件笔记
 date: 2020-03-31
 tags:
  - 前端

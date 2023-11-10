@@ -40,34 +40,33 @@ categories:
 ```html
 上传头像(请上传png jpg gif ico格式的文件)
 <input type="file" id="upLoadImg">
-<img id="showLogo" style="width:150px;height:150px;"
-     src="head.png"/>
+<img id="showLogo" style="width:150px;height:150px;" src="head.png"/>
 <script>
   var file_btn = document.querySelector("#upLoadImg");
   var logo_wrap = document.querySelector("#showLogo");
-  file_btn.onchange=function() {
- 		var file = this.files[0];
- 		//判断后缀名是否合法
- 		var filename = file.name.substring(file.name.lastIndexOf("."));
- 		var imgs = [".png",".jpg","gif",".ico"];
- 		var flag = false;
- 		for(var i=0; i<imgs.length; i++) {
- 			if(imgs[i]==filename) {
- 			 	flag=true;
- 			 	break;
- 			}
- 		}
- 		if(flag) {
- 			var reader=new FileReader();
- 			reader.readAsDataURL(file);
- 			reader.onload=function() {
- 			 	logo_wrap.src = reader.result;
- 			}
- 		}else {
- 			alert("文件类型不正确，请重新选择");
- 		}
+  file_btn.onchange = function() {
+    var file = this.files[0];
+    //判断后缀名是否合法
+    var filename = file.name.substring(file.name.lastIndexOf("."));
+    var imgs = [".png", ".jpg", "gif", ".ico"];
+    var flag = false;
+    for (var i = 0; i < imgs.length; i++) {
+      if (imgs[i] == filename) {
+        flag=true;
+        break;
+      }
+    }
+    if (flag) {
+      var reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = function() {
+        logo_wrap.src = reader.result;
+      }
+    } else {
+      alert("文件类型不正确，请重新选择");
+    }
   }
-</script>  
+</script>
 ```
 - `FileReader`
   有三个方法用来读取文件方法，返回结果在result中

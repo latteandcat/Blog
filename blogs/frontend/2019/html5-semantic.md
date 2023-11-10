@@ -85,36 +85,36 @@ categories:
 ```
 ### 对ie浏览器的兼容
 - 第一种解决方案
-```html
-<style type="text/css">
-	nav {
-		height: 200px;
-		background-color: red;
-		/* 将元素转化为块级元素 */
-		display: block;
-	}
-</style>
+  ```html
+  <style type="text/css">
+    nav {
+      height: 200px;
+      background-color: red;
+      /* 将元素转化为块级元素 */
+      display: block;
+    }
+  </style>
 
-<script type="text/javascript">
-	//第一种解决方案
-	document.createElement("nav");
-</script>
-```
+  <script type="text/javascript">
+    //第一种解决方案
+    document.createElement("nav");
+  </script>
+  ```
 - 第二种解决方案
 引入js插件，本质上与第一种解决方案相同
 - 第三种解决方案
 对浏览器版本进行判断，在需要的时候引入js插件
 
-```html
-//谷歌静态资源库
-<!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-//百度静态资源库
-<!--[if lt IE 9]>
-  <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-<![endif]-->
-```
+  ```html
+  //谷歌静态资源库
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  //百度静态资源库
+  <!--[if lt IE 9]>
+    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <![endif]-->
+  ```
 
 ## 六、注意事项
 1.尽可能少的使用无语义的标签div和span；
@@ -129,4 +129,4 @@ categories:
 
 6.表单域要用fieldset标签包起来，并用legend标签说明表单的用途；
 
-7.每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for=someld来让说明文本和相对应的input关联起来。
+7.每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for=someId来让说明文本和相对应的input关联起来。

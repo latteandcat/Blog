@@ -1,5 +1,5 @@
 ---
-title: CSS3实现翻转(Flip)效果
+title: CSS3实现翻转（Flip）效果
 date: 2019-09-09
 tags:
  - 前端 
@@ -92,8 +92,8 @@ categories:
 那么你会发现图片是以顶部的那条线翻转的。  
 因为默认的transform-origin值，是以元素的中心点为基本点翻转的。  
 解决方法：  
-   (1). 给.flip设置和.front,.back相同的宽高。  
-   (2). 给.flip设置transform-origin:100% 150px/*高度的一半*/属性。
+   (1) 给.flip设置和.front,.back相同的宽高。  
+   (2) 给.flip设置transform-origin:100% 150px/*高度的一半*/属性。
 
 5. IE的适配  
 需要针对IE对这段标准的卡片翻转代码进行特殊的修改，因为IE还没有实现现代浏览器中的transform功能。基本的做法就是对正面和背面两个卡片同时分别翻转。

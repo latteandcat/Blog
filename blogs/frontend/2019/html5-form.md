@@ -13,22 +13,22 @@ categories:
 
 ```html
 <form>
-    <fieldset>
-        <legend>新的表单控件</legend>
-        邮箱 type="email" <input placeholder="输入合法的邮箱地址" type="email" />
-        url type="url" <input placeholder="输入合法的网址" type="url" />
-        search type="search" <input placeholder="输入搜索内容" type="search" />
-        数字 type="number" <input placeholder="只能输入数字" type="number" />
-        电话 type="tel" <input placeholder="输入合法的电话" type="tel" />
-        滑块 type="range" <input type="range" />
-        颜色 type="color" <input placeholder="" type="color" />
-        日期 type="date" <input placeholder="" type="date" />
-        选择一个日期（UTC 时间） type="datetime" <input placeholder="" type="datetime" />
-        选择一个日期和时间 (无时区) type="datetime-local" <input placeholder="" type="datetime-local" />
-        月份 type="month" <input placeholder="" type="month" />
-        周 type="week" <input placeholder="" type="week" />
-        时间 type="time" <input placeholder="" type="time" />
-    </fieldset>
+  <fieldset>
+    <legend>新的表单控件</legend>
+    邮箱 <input placeholder="输入合法的邮箱地址" type="email" />
+    url <input placeholder="输入合法的网址" type="url" />
+    search <input placeholder="输入搜索内容" type="search" />
+    数字 <input placeholder="只能输入数字" type="number" />
+    电话 <input placeholder="输入合法的电话" type="tel" />
+    滑块 <input type="range" />
+    颜色 <input placeholder="" type="color" />
+    日期 <input placeholder="" type="date" />
+    选择一个日期 (UTC 时间) <input placeholder="" type="datetime" />
+    选择一个日期和时间 (无时区) <input placeholder="" type="datetime-local" />
+    月份 <input placeholder="" type="month" />
+    周 <input placeholder="" type="week" />
+    时间 <input placeholder="" type="time" />
+  </fieldset>
 </form>
 ```
 
@@ -39,16 +39,16 @@ categories:
 
 ```html
 <form action="#" method="get">
-		<input type="text" name="uname" pattern="^\d{4,11}" required class="uname">
-		<input type="submit" name=""><br><br>
-    正确格式为4到11位数字，请输入错误格式以测试
+  <input type="text" name="uname" pattern="^\d{4,11}" required class="uname">
+  <input type="submit" name=""><br><br>
+  正确格式为4到11位数字，请输入错误格式以测试
 </form>
 <script>
   var input = document.querySelector(".uname");
-  input.oninvalid=function(){   	
-    if(this.validity.patternMismatch===true){
+  input.oninvalid = function(){   	
+    if (this.validity.patternMismatch===true) {
       this.setCustomValidity("请输入4到11位数字");
-    }else{
+    } else {
       this.setCustomValidity("");
     }
   }
@@ -73,9 +73,9 @@ input 元素使用 datalist 预定义值
 
 ```html
 <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
-    <input type="range" id="a" value="50">100 +
-    <input type="number" id="b" value="50">=
-    <output name="x" for="a b"></output>
+  <input type="range" id="a" value="50">100 +
+  <input type="number" id="b" value="50">=
+  <output name="x" for="a b"></output>
 </form>
 ```
 
@@ -87,7 +87,8 @@ input 元素使用 datalist 预定义值
 
 当提交表单时，会生成两个键，一个是私钥，一个公钥。
 
-私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。公钥可用于之后验证用户的客户端证书（client certificate）。
+私钥（private key）存储于客户端，公钥（public key）则被发送到服务器。  
+公钥可用于之后验证用户的客户端证书（client certificate）。
 
 ## 表单新属性
 

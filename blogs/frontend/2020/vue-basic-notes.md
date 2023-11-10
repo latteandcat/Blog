@@ -1,5 +1,5 @@
 ---
-title: Vue.js基础笔记
+title: Vue基础笔记
 date: 2020-01-09
 tags:
  - 前端
