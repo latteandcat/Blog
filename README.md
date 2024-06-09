@@ -7,7 +7,7 @@ modules:
 bannerBrand:
   bgImage: '/bg.jpg'
   title: latte and cat
-  description: life is like a cup of latte, and cat will make it unlonely
+  description: Life is like a cup of latte, and cat will make it unlonely.
 blog:
   socialLinks:
     - { icon: 'Wikis', link: 'https://latteandcat.cn' }
