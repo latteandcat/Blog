@@ -5,9 +5,10 @@ modules:
   - Blog
   - Footer
 bannerBrand:
-  bgImage: '/bg.jpg'
-  title: latte and cat
-  description: Life is like a cup of latte, and cat will make it unlonely.
+  bgImage: '/latte-and-cat-bg.png'
+  title: Latte and cat
+  description: MindGarden
+  tagline: 一座属于个人的数字花园，栖居着随笔、流动的札记与那些值得被珍藏的灵感与念想。
 blog:
   socialLinks:
     - { icon: 'Wikis', link: 'https://latteandcat.cn' }
