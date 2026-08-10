@@ -1,0 +1,128 @@
+name: Deploy blog
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: blog-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+
+    environment:
+      name: production
+      url: https://blog.latteandcat.cn
+
+    env:
+      DEPLOY_HOST: ${{ vars.DEPLOY_HOST }}
+      DEPLOY_USER: deploy
+      DEPLOY_ROOT: /var/www/blog
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build VuePress
+        run: npm run build
+
+      - name: Verify build
+        run: test -s .vuepress/dist/index.html
+
+      - name: Configure SSH
+        env:
+          DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+        run: |
+          set -euo pipefail
+
+          install -m 700 -d "$HOME/.ssh"
+
+          printf '%s\n' "$DEPLOY_SSH_KEY" \
+            > "$HOME/.ssh/id_ed25519"
+
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" \
+            > "$HOME/.ssh/known_hosts"
+
+          chmod 600 "$HOME/.ssh/id_ed25519"
+          chmod 600 "$HOME/.ssh/known_hosts"
+
+      - name: Upload and activate release
+        run: |
+          set -euo pipefail
+
+          REMOTE="${DEPLOY_USER}@${DEPLOY_HOST}"
+          RELEASE_DIR="${DEPLOY_ROOT}/releases/${GITHUB_SHA}"
+
+          SSH_OPTIONS=(
+            -i "$HOME/.ssh/id_ed25519"
+            -o BatchMode=yes
+            -o StrictHostKeyChecking=yes
+          )
+
+          ssh "${SSH_OPTIONS[@]}" "$REMOTE" \
+            "mkdir -p '${RELEASE_DIR}'"
+
+          rsync \
+            -az \
+            --delete \
+            --chmod=D755,F644 \
+            -e "ssh -i $HOME/.ssh/id_ed25519 -o BatchMode=yes -o StrictHostKeyChecking=yes" \
+            .vuepress/dist/ \
+            "${REMOTE}:${RELEASE_DIR}/"
+
+          PREVIOUS_TARGET="$(
+            ssh "${SSH_OPTIONS[@]}" "$REMOTE" \
+              "readlink -f '${DEPLOY_ROOT}/current' || true"
+          )"
+
+          ssh "${SSH_OPTIONS[@]}" "$REMOTE" \
+            "test -s '${RELEASE_DIR}/index.html' && \
+             ln -sfnT '${RELEASE_DIR}' '${DEPLOY_ROOT}/current'"
+
+          if ! curl \
+            --fail \
+            --silent \
+            --show-error \
+            --location \
+            --retry 5 \
+            --retry-all-errors \
+            --max-time 20 \
+            https://blog.latteandcat.cn/ \
+            >/dev/null
+          then
+            echo "Health check failed; rolling back."
+
+            if [ -n "$PREVIOUS_TARGET" ]; then
+              ssh "${SSH_OPTIONS[@]}" "$REMOTE" \
+                "ln -sfnT '${PREVIOUS_TARGET}' '${DEPLOY_ROOT}/current'"
+            fi
+
+            exit 1
+          fi
+
+          ssh "${SSH_OPTIONS[@]}" "$REMOTE" \
+            "find '${DEPLOY_ROOT}/releases' \
+               -mindepth 1 -maxdepth 1 -type d \
+               -printf '%T@ %p\n' |
+             sort -nr |
+             tail -n +6 |
+             cut -d' ' -f2- |
+             xargs -r rm -rf"
