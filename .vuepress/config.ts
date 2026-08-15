@@ -1,15 +1,32 @@
 import { defineUserConfig } from "vuepress";
+import { pwaPlugin } from "@vuepress/plugin-pwa";
 import recoTheme from "vuepress-theme-reco";
 import { viteBundler } from '@vuepress/bundler-vite'
 import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
+  lang: "zh-CN",
   title: "Latte and cat MindGarden",
   description: "Life is like a cup of latte, and cat will make it unlonely.",
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   bundler: viteBundler(),
+  shouldPrefetch: false,
+  plugins: [
+    pwaPlugin({
+      update: "hint",
+      showInstall: false,
+      favicon: "/favicon.ico",
+      themeColor: "#5b8fc9",
+      locales: {
+        "/": {
+          hint: "发现新内容可用",
+          update: "新内容已准备就绪",
+        },
+      },
+    }),
+  ],
   theme: recoTheme({
     logo: "/logo.png",
     author: "Latte and cat",
@@ -51,6 +68,10 @@ export default defineUserConfig({
         ]
       },
       { text: '时间轴', link: '/timeline' }
+    ],
+    socialLinks: [
+      { icon: 'IconWiki', link: 'https://latteandcat.cn' },
+      { icon: 'IconGithub', link: 'https://github.com/latteandcat' }
     ]
   })
 });
